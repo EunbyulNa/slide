@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+* { margin:0; padding:0; box-sizing:border-box; }
+li { list-style:none; }
+a { text-decoration:none; }
+
+body { font-size:; font-family:'맑은 고딕', sans-serif; }
+
+
+/*    -- header --    */
+header:after, .gnb:after, .gnblistBox:after { content:""; display:block; clear:both; }
+
+#top_banner { width:100%; height:100px; background:url('../img/audition_topbn.jpg');}
+header { /*border:1px solid red;*/ position:relative; width:1080px; margin:auto; height:110px; padding:30px 0; }
+
+  h1 { float:left; }
+  nav { float:right; }
+  nav .gnb { /*border:1px solid blue;*/ width:860px; height:43px; }
+  nav .gnb > li { /*border:1px solid red;*/
+                  float:left;
+                  width:16%;
+                  text-align:center; }
+
+  nav .gnb > li > a { display:block;
+                      line-height:41px;
+                      font-size:15px;
+                      font-weight:bold;
+                      letter-spacing:1px;
+                      color:#000; }
+
+  nav .gnb > li > a:hover { color:#ffa300; }
+  nav .gnb > li:last-child { width:170px; }
+
+  .gnblistBox { position:absolute;
+                border:1px solid #dfe0e2;
+                width:860px;
+                padding:20px 0 30px;
+                background:#fff;
+                display:none;
+                z-index:1; }
+
+  .gnblistUl { border-left:1px solid #e0e1e3;
+               display:block;
+               float:left;
+               width:16%; height:145px;
+               text-align:center; }
+
+  .gnblistUl:first-child { border-left:0; }
+
+  .gnblistUl li { height:25px;}
+  .gnblistUl_t { font-size:13px; font-weight:bold; }
+
+  .gnblistUl a { font-size:11px; font-weight:normal; color:#767676; }
+  .gnblistUl a:hover { color:#ffa300; }
+
+/*    -- slider --    */
+#slider { position:relative; width:1080px; height:500px; margin:30px auto; }
+
+.slick-prev, .slick-next { position:absolute; width:48px; height:48px; border:0; outline:none; cursor:pointer; text-indent:-9999px; z-index:1; top:50%; transform:translateY(-50%); }
+.slick-prev { background:url('img/left.png'); left:25px; }
+.slick-next { background:url('img/right.png'); right:25px; }
+
+.slick-dots { position:absolute; left:45%; bottom:30px; z-index:1; }
+.slick-dots li { float:left; width:16px; height:16px; border:2px solid #fff; margin-right:5px; border-radius:8px; cursor:pointer; }
+.slick-dots button { background:none; border:none; text-indent:-9999px; }
+.slick-active { background:#fff; }
+
+.btn { position:absolute; width:16px; height:16px; background:url('../img/stop-16.png'); no-repeat; text-indent:-9999px; cursor:pointer; left:43%; bottom:30px; z-index:1; }
+
+.btn.on { background:url('../img/play-16.png'); no-repeat; }
+
+ /*    -- section --    */
+ section { width:1080px; height:500px; margin:30px auto; border:3px solid #dfe0e2; }
